@@ -7,6 +7,7 @@ import simpylc as sp
 import robot as rb
 import control as ct
 import visualisation as vs
-import timing as tm
+#import timing as tm
 
-sp.World (ct.Control, rb.Robot, vs.Visualisation, tm.Timing)
+#sp.World (ct.Control, rb.Robot, vs.Visualisation, tm.Timing)
+sp.World (ct.Control, rb.Robot, vs.Visualisation)

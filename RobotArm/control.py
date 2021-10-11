@@ -2,6 +2,7 @@ import simpylc as sp
 
 class Control (sp.Module):
     def __init__ (self):
+        #maak alle invoervelden aan per header
         sp.Module.__init__ (self)
         
         self.page ('movement control')
@@ -26,7 +27,7 @@ class Control (sp.Module):
         self.torSpeedDif = sp.Register ()
 
         self.group ('general')
-        self.go = sp.Marker ()
+        self.go = sp.Marker (1)
         
         self.group ('upper arm drive control', True)
         self.uppVoltFac = sp.Register (0.25)
