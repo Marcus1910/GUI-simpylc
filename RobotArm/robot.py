@@ -1,6 +1,7 @@
 import simpylc as sp
 
 class Robot (sp.Module):
+    #create all input fields here with groups
     def __init__ (self):
         sp.Module.__init__ (self)
 
@@ -70,6 +71,9 @@ class Robot (sp.Module):
         self.finAngSet = sp.Register ()
         self.finAng = sp.Register ()
         self.finEnab = sp.Marker ()
+
+        self.group('test')
+        self.test = sp.Register (5)
         
     def input (self):   
         self.part ('torso')
@@ -93,6 +97,10 @@ class Robot (sp.Module):
         self.hanEnab.mark (sp.world.control.hanEnab)
         self.finAngSet.set (sp.world.control.finAngSet)
         self.finEnab.mark (sp.world.control.finEnab)
+
+        self.part ('test')
+        self.test.set(10)
+
         
     def sweep (self):
         self.part ('Torso')

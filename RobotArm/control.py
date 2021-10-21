@@ -27,6 +27,7 @@ class Control (sp.Module):
         self.torSpeedDif = sp.Register ()
 
         self.group ('general')
+        #remove 1 if you want to set up settings before running the program
         self.go = sp.Marker (1)
         
         self.group ('upper arm drive control', True)
