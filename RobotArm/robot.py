@@ -72,6 +72,7 @@ class Robot (sp.Module):
         self.finAng = sp.Register ()
         self.finEnab = sp.Marker ()
 
+        
         self.group('test')
         self.test = sp.Register (5)
         
